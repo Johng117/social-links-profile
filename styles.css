@@ -8,71 +8,101 @@
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("/assets/fonts/static/Inter-Regular.ttf");
-    font-style: normal;
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/static/Inter-SemiBold.ttf");
-    font-style: normal;
-    font-weight: 600;
-  }
-  @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/static/Inter-Bold.ttf");
-    font-style: normal;
-    font-weight: 700;
-  }
- 
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Inter;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
 }
 
 body {
-    width:100vw;
-    min-height: 100vh;
-    background-color:var(--Grey-900)
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--Grey-900);
 }
 
 .main-container {
-    height: 100%;
-    width: 375px;
-    margin: 100px auto;
-    background-color: var(--Grey-800);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+  height: 100%;
+  width: 375px;
+  margin: 100px auto;
+  background-color: var(--Grey-800);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
 
-    & .profile-image {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        margin-bottom: 22px;
+  & .profile-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 22px;
+  }
+
+  & .name-location-tag {
+    & .profile-name {
+      margin-bottom: 7px;
+      font-weight: 600;
+      color: var(--White);
     }
 
-    & .name-location-tag {
-        & .profile-name {
-            margin-bottom: 7px;
-            font-weight: 600;
-            color: var(--White);
-        }
-
-        & .profile-location {
-            color: var(--Green);
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
-
-        & .profile-tag {
-            color: var(--White);
-            font-size: 14px;
-            font-weight: 400;
-            margin-bottom: 15px;
-        }
+    & .profile-location {
+      color: var(--Green);
+      font-size: 14px;
+      margin-bottom: 25px;
     }
+
+    & .profile-tag {
+      color: var(--White);
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 22px;
+    }
+  }
+
+  & .social-links-container {
+    & .links-list {
+      list-style-type: none;
+
+      & .links-list-item {
+        height: 50px;
+        width: 100%;
+        border-radius: 8px;
+        background-color: var(--Grey-700);
+        margin-bottom: 15px;
+
+        & a {
+          text-decoration: none;
+          color: var(--White);
+          font-weight: 700;
+          font-size: 14px;
+          height: 100%;
+          width: 100%;
+          display: block;
+          padding-top: 15px;
+        }
+      }
+    }
+    & .links-list li:last-child {
+        margin-bottom: 0px;
+    }
+    
+
+  }
 }
